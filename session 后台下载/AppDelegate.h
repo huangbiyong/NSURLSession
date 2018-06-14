@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^DownloadCompletionHandler)(void);
+
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+// 后台下载的
+@property (strong, nonatomic) NSString *identifier;
+@property (copy,   nonatomic) DownloadCompletionHandler completionHandler;
 
 @end
 

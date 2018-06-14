@@ -47,5 +47,15 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+//后台传输
+- (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(nonnull NSString *)identifier completionHandler:(nonnull void (^)(void))completionHandler {
+    
+    // 保存
+    self.identifier = identifier;
+    self.completionHandler = completionHandler;
+    
+}
+
+
 
 @end
